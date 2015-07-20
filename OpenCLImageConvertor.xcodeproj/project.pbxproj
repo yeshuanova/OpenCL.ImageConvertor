@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		C455A06E1B5CC57100F87B1C /* OpenCLImageConvertor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenCLImageConvertor; sourceTree = BUILT_PRODUCTS_DIR; };
 		C455A0711B5CC57100F87B1C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C455A0781B5CC59D00F87B1C /* cl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cl.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		C455A0701B5CC57100F87B1C /* OpenCLImageConvertor */ = {
 			isa = PBXGroup;
 			children = (
+				C455A0781B5CC59D00F87B1C /* cl.hpp */,
 				C455A0711B5CC57100F87B1C /* main.cpp */,
 			);
 			path = OpenCLImageConvertor;
