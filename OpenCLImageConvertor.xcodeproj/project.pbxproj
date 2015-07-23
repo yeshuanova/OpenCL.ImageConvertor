@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C455A0721B5CC57100F87B1C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C455A0711B5CC57100F87B1C /* main.cpp */; };
 		C455A07A1B5CC83700F87B1C /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C455A0791B5CC83700F87B1C /* OpenCL.framework */; };
-		C455A07C1B5CC88B00F87B1C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C455A07B1B5CC88B00F87B1C /* README.md */; };
 		C455A0801B5EA16500F87B1C /* ConvertState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C455A07E1B5EA16500F87B1C /* ConvertState.cpp */; };
 /* End PBXBuildFile section */
 
@@ -134,7 +133,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C455A07C1B5CC88B00F87B1C /* README.md in Sources */,
 				C455A0721B5CC57100F87B1C /* main.cpp in Sources */,
 				C455A0801B5EA16500F87B1C /* ConvertState.cpp in Sources */,
 			);
@@ -178,9 +176,34 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+				);
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -214,8 +237,33 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+				);
 				SDKROOT = macosx;
 			};
 			name = Release;

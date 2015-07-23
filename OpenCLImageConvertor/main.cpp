@@ -20,6 +20,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <opencv2/opencv.hpp>
+#include <opencv2/imgproc.hpp>
 
 #ifdef __APPLE__
 #include <OpenCL/opencl.h>
@@ -53,6 +55,11 @@ int main(int argc, const char * argv[]) {
                     cout << "Run grayscale convert" << endl;
                     cout << "\t source path : " << state.get_source_path() << endl;
                     cout << "\t dest path : " << state.get_dest_path() << endl;
+                    
+                    cout << endl;
+                    cv::Mat src_img = cv::imread(state.get_source_path());
+                    cout << "Image Row : " << src_img.rows << ", Image Col : " << src_img.cols << endl;
+                    
                 }
                 break;
             
@@ -62,10 +69,12 @@ int main(int argc, const char * argv[]) {
                 return 0;
         }
         
+    } catch(cv::Exception& e) {
+        cout << "OpenCV Exception : " << endl << e.what() << endl;
     } catch (cl::Error& e) {
-        cout << "OpenCL Error : " << e.what() << endl;
+        cout << "OpenCL Error : " << endl << e.what() << endl;
     } catch (exception& e) {
-        cout << endl << "C++ Exception : " << e.what() << endl;
+        cout << endl << "C++ Exception : " << endl << e.what() << endl;
     } catch (...) {
         cout << endl << "Unsupport Exception" << endl;
     }
